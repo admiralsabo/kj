@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Krisha Joyce Pitogo</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="font-poppins bg-dark-500">
@@ -16,9 +16,9 @@
           <div class="w-1/5">
             <a href="#" class="font-bold text-white flex-shrink-0">KJ</a>
           </div>
-          <a class="w-39 h-39 flex md:hidden">
+          <button onclick="menuToggle();" class="w-39 h-39 flex md:hidden">
             <img src="./images/menu.svg" alt="" />
-          </a>
+          </button>
           <nav class="md:flex md:w-full hidden md:justify-between">
             <ul
               class="flex gap-5 font-semibold text-white place-items-center uppercase"
@@ -28,17 +28,81 @@
               <li>About</li>
             </ul>
             <div>
-              <button
+              <a
                 class="bg-primary rounded-md py-1 px-4 text-dark-450 font-medium"
               >
                 Start a Project
-              </button>
+              </a>
+            </div>
+          </nav>
+          <nav
+            id="mobile-nav"
+            class="hidden transition-all md:transition-none ease-in-out duration-1000"
+          >
+            <div
+              class="fixed bg-dark-400 w-10/12 h-full top-0 right-0 drop-shadow-2xl z-99"
+            >
+              <div class="flex flex-col w-full place-items-end p-5">
+                <button onclick="closeToggle();">
+                  <span>x</span>
+                </button>
+              </div>
+              <ul
+                class="duration-300 ease-out flex flex-col gap-10 mt-14 place-items-center text-white font-semibold text-lg"
+              >
+                <li
+                  class="hover:text-primary border-b px-14 py-4 border-b-gray-400"
+                >
+                  <a href="#">Home</a>
+                </li>
+                <li
+                  class="hover:text-primary border-b px-14 py-4 border-b-gray-400"
+                >
+                  <a href="#services">Services</a>
+                </li>
+                <li
+                  class="hover:text-primary border-b px-14 py-4 border-b-gray-400"
+                >
+                  <a href="#projects">Projects</a>
+                </li>
+                <li
+                  class="hover:text-primary border-b px-14 py-4 border-b-gray-400"
+                >
+                  <a href="#about">About</a>
+                </li>
+                <a
+                  class="mt-5 bg-primary rounded-md py-1 px-4 text-dark-450 text-sm font-medium"
+                >
+                  Start a Project
+                </a>
+              </ul>
             </div>
           </nav>
         </div>
       </div>
     </header>
     <main>
+      <div
+        class="absolute top-0 -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="absolute top-[100vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="absolute top-[300vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="absolute top-[400vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="absolute top-[500vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="md:hidden absolute top-[700vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="md:hidden absolute top-[800vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
       <section>
         <div
           class="mx-4 my-10 flex flex-col lg:flex-row place-items-center md:justify-evenly md:mx-8"
@@ -200,7 +264,7 @@
               />
             </a>
           </div>
-          <div class="mt-2 flex flex-col md:flex-row relative gap-4">
+          <div class="mt-2 flex flex-col md:flex-row relative gap-4 -z-10">
             <div
               class="border-t-4 border-neutral bg-dark-400 py-8 px-4 flex flex-col gap-2 fade mySlides"
             >
@@ -440,6 +504,22 @@
         }
       }
       slides[slideIndex - 1].style.display = "block";
+    }
+
+    const menu = document.getElementById("mobile-nav");
+    function menuToggle() {
+      menu.classList.remove("hidden");
+    }
+    function closeToggle() {
+      menu.classList.add("hidden");
+    }
+    window.addEventListener("resize", menuResize);
+    function menuResize() {
+      // First get the size from the window
+      const window_size = window.innerWidth || document.body.clientWidth;
+      if (window_size > 640) {
+        menu.classList.add("hidden");
+      }
     }
   </script>
 </html>
