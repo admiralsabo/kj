@@ -575,6 +575,10 @@ video {
   top: 700vh;
 }
 
+.top-\[650vh\]{
+  top: 650vh;
+}
+
 .-z-30{
   z-index: -30;
 }
@@ -1146,6 +1150,10 @@ video {
 
   .md\:w-2\/3{
     width: 66.666667%;
+  }
+
+  .md\:max-w-\[1006px\]{
+    max-width: 1006px;
   }
 
   .md\:grid-cols-3{
