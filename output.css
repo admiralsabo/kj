@@ -535,48 +535,88 @@ video {
   right: 0px;
 }
 
-.-top-\[20vh\]{
-  top: -20vh;
+.-top-40{
+  top: -10rem;
 }
 
 .-left-32{
   left: -8rem;
 }
 
-.top-\[100vh\]{
-  top: 100vh;
+.-bottom-40{
+  bottom: -10rem;
 }
 
 .-right-32{
   right: -8rem;
 }
 
-.top-\[300vh\]{
-  top: 300vh;
+.-bottom-0{
+  bottom: -0px;
 }
 
-.top-\[370vh\]{
-  top: 370vh;
+.top-40{
+  top: 10rem;
 }
 
-.top-\[440vh\]{
-  top: 440vh;
+.top-1\/2{
+  top: 50%;
 }
 
-.top-\[600vh\]{
-  top: 600vh;
+.top-1\/4{
+  top: 25%;
 }
 
-.top-\[500vh\]{
-  top: 500vh;
+.-bottom-10{
+  bottom: -2.5rem;
 }
 
-.top-\[700vh\]{
-  top: 700vh;
+.-bottom-20{
+  bottom: -5rem;
 }
 
-.top-\[650vh\]{
-  top: 650vh;
+.bottom-0{
+  bottom: 0px;
+}
+
+.bottom-10{
+  bottom: 2.5rem;
+}
+
+.-top-0{
+  top: -0px;
+}
+
+.-top-3\/4{
+  top: -75%;
+}
+
+.-top-2\/4{
+  top: -50%;
+}
+
+.-top-1\/4{
+  top: -25%;
+}
+
+.-top-2\/3{
+  top: -66.666667%;
+}
+
+.top-3\/4{
+  top: 75%;
+}
+
+.top-2\/4{
+  top: 50%;
+}
+
+.top-2\/3{
+  top: 66.666667%;
+}
+
+.right-32{
+  right: 8rem;
 }
 
 .-z-30{
@@ -736,6 +776,10 @@ video {
   flex-shrink: 0;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .resize{
   resize: both;
 }
@@ -798,6 +842,10 @@ video {
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .overflow-x-hidden{
@@ -866,6 +914,10 @@ video {
 .bg-dark-550{
   --tw-bg-opacity: 1;
   background-color: rgb(38 40 55 / var(--tw-bg-opacity));
+}
+
+.bg-light{
+  background-color: #f48c5c99;
 }
 
 .object-cover{
@@ -999,12 +1051,16 @@ video {
   color: rgb(138 137 142 / var(--tw-text-opacity));
 }
 
-.opacity-40{
-  opacity: 0.4;
+.opacity-60{
+  opacity: 0.6;
 }
 
-.blur-2xl{
-  --tw-blur: blur(40px);
+.opacity-100{
+  opacity: 1;
+}
+
+.blur-\[250px\]{
+  --tw-blur: blur(250px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1102,10 +1158,6 @@ video {
 }
 
 @media (min-width: 768px){
-  .md\:top-\[50vh\]{
-    top: 50vh;
-  }
-
   .md\:mx-8{
     margin-left: 2rem;
     margin-right: 2rem;

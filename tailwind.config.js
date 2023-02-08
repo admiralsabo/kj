@@ -20,6 +20,7 @@ module.exports = {
         },
         accent: "#384E77",
         neutral: "#A8A8A8",
+        light: "#f48c5c99",
       },
       fontSize: {
         sm: "1.125rem",

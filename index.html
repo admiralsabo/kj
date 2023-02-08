@@ -7,7 +7,7 @@
     <title>Krisha Joyce Pitogo</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="font-poppins bg-dark-500 overflow-x-hidden">
+  <body class="font-poppins bg-dark-500 relative overflow-x-hidden">
     <header>
       <div class="bg-dark-300">
         <div
@@ -87,25 +87,22 @@
     </header>
     <main>
       <div
-        class="absolute -top-[20vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute -top-40 -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <div
-        class="absolute md:top-[50vh] top-[100vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute top-3/4 -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <div
-        class="absolute top-[300vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute top-2/4 -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <div
-        class="absolute top-[370vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute top-1/4 -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <div
-        class="md:hidden absolute top-[440vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute top-2/3 -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <div
-        class="md:hidden absolute top-[600vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
-      ></div>
-      <div
-        class="md:hidden absolute top-[700vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute bottom-10 -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-light blur-[250px] opacity-100"
       ></div>
       <section>
         <div
@@ -115,7 +112,10 @@
             <h1
               class="font-semibold text-white text-xl sm:text-2xl md:text-3xl md:font-bold"
             >
-              Hello, I am Krisha <br />A Graphic Designer
+              Hello, I am Krisha <br />A
+              <span class="text-primary uppercase transition-all" id="skills"
+                >Graphic Designer</span
+              >
             </h1>
             <p class="font-roboto text-neutral text-sm md:text-md">
               I'm Krisha, a Graphic and Web Designer from the Philippines who
@@ -140,7 +140,9 @@
 
       <section>
         <div class="">
-          <ul class="flex flex-wrap gap-6 justify-center px-2 text-white">
+          <ul
+            class="flex flex-wrap gap-6 justify-center px-2 text-white uppercase"
+          >
             <div class="flex gap-1">
               <div class="w-5 h-5 rounded-full bg-primary"></div>
               <span>Graphic Design</span>
@@ -315,14 +317,18 @@
               <ul
                 class="flex flex-wrap gap-6 justify-center px-2 text-dark-350 font-medium font-sm"
               >
-                <li class="text-primary border-b-4 border-primary">
+                <li
+                  class="text-primary border-b-4 hover:text-primary border-primary"
+                >
                   Latest Works
                 </li>
-                <li class="">UI Design</li>
-                <li class="">Web Templates</li>
-                <li>Logo</li>
-                <li>Branding</li>
-                <li>Children Illustration</li>
+                <li class="hover:text-primary cursor-pointer">UI Design</li>
+                <li class="hover:text-primary cursor-pointer">Web Templates</li>
+                <li class="hover:text-primary cursor-pointer">Logo</li>
+                <li class="hover:text-primary cursor-pointer">Branding</li>
+                <li class="hover:text-primary cursor-pointer">
+                  Children Illustration
+                </li>
               </ul>
             </div>
             <div
@@ -523,6 +529,24 @@
       const window_size = window.innerWidth || document.body.clientWidth;
       if (window_size > 640) {
         menu.classList.add("hidden");
+      }
+    }
+
+    const skills = [
+      "Graphic Design",
+      "Illustrator",
+      "Developer",
+      "Web DESIGNER",
+    ];
+    var skill = document.getElementById("skills");
+    var inst = setInterval(changeSkill, 1000);
+    var counter = 0;
+    function changeSkill() {
+      skill.innerHTML = skills[counter];
+      counter++;
+      if (counter >= skills.length) {
+        counter = 0;
+        // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
       }
     }
   </script>
