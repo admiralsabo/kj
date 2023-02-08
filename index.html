@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +7,7 @@
     <title>Krisha Joyce Pitogo</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="font-poppins bg-dark-500">
+  <body class="font-poppins bg-dark-500 overflow-x-hidden">
     <header>
       <div class="bg-dark-300">
         <div
@@ -23,9 +23,13 @@
             <ul
               class="flex gap-5 font-semibold text-white place-items-center uppercase"
             >
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li>About</li>
+              <li class="hover:text-primary">
+                <a href="#services">Services</a>
+              </li>
+              <li class="hover:text-primary">
+                <a href="#projects">Projects</a>
+              </li>
+              <li class="hover:text-primary"><a href="#about">About</a></li>
             </ul>
             <div>
               <a
@@ -44,7 +48,7 @@
             >
               <div class="flex flex-col w-full place-items-end p-5">
                 <button onclick="closeToggle();">
-                  <span>x</span>
+                  <img src="./images/close-icon.svg" alt="" />
                 </button>
               </div>
               <ul
@@ -83,10 +87,10 @@
     </header>
     <main>
       <div
-        class="absolute top-0 -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute -top-[20vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
       ></div>
       <div
-        class="absolute top-[100vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="absolute md:top-[50vh] top-[100vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
       ></div>
       <div
         class="absolute top-[300vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
@@ -101,7 +105,10 @@
         class="md:hidden absolute top-[600vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
       ></div>
       <div
-        class="md:hidden absolute top-[700vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+        class="md:hidden absolute top-[500vh] -left-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
+      ></div>
+      <div
+        class="md:hidden absolute top-[700vh] -right-32 h-[305px] w-[305px] md:h-[576px] md:w-[576px] rounded-full -z-30 bg-primary blur-2xl opacity-40"
       ></div>
       <section>
         <div
@@ -300,7 +307,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="projects">
         <div>
           <div class="bg-dark-400 mx-4 my-20 md:mx-8">
             <div class="flex flex-col place-items-center align-middle py-8">
@@ -377,7 +384,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="about">
         <div class="md:px-20">
           <div class="mx-4 flex flex-col gap-4">
             <h2 class="text-white font-semibold text-xl">About me</h2>
